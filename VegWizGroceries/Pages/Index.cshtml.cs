@@ -7,6 +7,8 @@ namespace VegWizGroceries.Pages
     public class IndexModel : PageModel
     {
         [BindProperty]
+        public int Quantity { get; set; } = 1;
+        [BindProperty]
         public int Rating { get; set; }
         [BindProperty]
         public string Feedback { get; set; }
