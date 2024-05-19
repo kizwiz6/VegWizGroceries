@@ -39,4 +39,30 @@
     }
 </script>
 
+<div class="mt-5">
+    <h5>Let us know what you think!</h5>
+    <form method="post">
+        <div class="form-group">
+            <p>How would you rate your experience?</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" asp-for="Rating" type="radio"value="1">
+                <label class="form-check-label" asp-for="Rating">Bad</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" asp-for="Rating" type="radio" value="2">
+                <label class="form-check-label" asp-for="Rating">Average</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" asp-for="Rating" type="radio" value="3">
+                <label class="form-check-label" asp-for="Rating">Good</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Comments:</label>
+            <textarea class="form-control" asp-for="Feedback" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn text-white">Submit</button>
+    </form>
+</div>
+
 <hr class="mt-2" />

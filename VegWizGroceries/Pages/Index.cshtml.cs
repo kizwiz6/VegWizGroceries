@@ -26,5 +26,14 @@ namespace VegWizGroceries.Pages
         {
 
         }
+
+        public async Task OnPostAsync()
+        {
+            using (StreamWriter sw = new StreamWriter("feedback.txt", append: true))
+            {
+                await sw.WriteLineAsync($"{DateTime.Now} - Rating: {Rating}");
+                await sw.WriteLineAsync(Feedback);
+            }
+        }
     }
 }
