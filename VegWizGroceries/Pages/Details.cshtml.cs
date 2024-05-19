@@ -10,8 +10,13 @@ namespace VegWizGroceries.Pages
         public List<GroceryItem> Foods = Inventory.ToList();
         public GroceryItem CurrentFood;
 
-        public void OnGet(string name)
+        public async Task OnGetAsync(string name)
         {
+            using (StreamWriter writer = new StreamWriter("log.txt", append: true))
+            {
+                await writer.WriteLineAsync($"{DateTime.Now} {name}");
+            }
+
             CurrentFood = Foods.Find(food => food.Name.ToLower() == name.ToLower());
         }
     }
