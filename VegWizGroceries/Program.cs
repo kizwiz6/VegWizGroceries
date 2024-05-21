@@ -28,6 +28,8 @@ namespace VegWizGroceries
 
             app.MapRazorPages();
 
+            app.UseWelcomePage();
+
             app.Run();
         }
     }
